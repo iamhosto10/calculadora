@@ -21,7 +21,12 @@ function App() {
   };
   
   const resultado = () => {
-    setInput(evaluate(input));
+    if (input) {
+      setInput(evaluate(input));
+    } else {
+      alert(" no deje la cadena vacia");
+    }
+    
   };
 
 
