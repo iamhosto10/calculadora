@@ -3,11 +3,24 @@ import freeCodeCampLogo from './imagenes/freecodecamp-logo.png'
 import Boton from './Componentes/Boton'
 import Pantalla from './Componentes/Pantalla'
 import BotonClear from './Componentes/BotonClear';
-import { useState } from 'react';
+import React ,{ useState , useEffect} from 'react';
 import { evaluate } from 'mathjs';
 
 
 function App() {
+
+  {/*const [tareas, setTareas] = useState();
+
+  const fetchAPI = async () => {
+    const response = await fetch('https://jsonplaceholder.typicode.com/todos')
+    const respuesta = await response.json()
+    setTareas(respuesta)
+  };
+
+  useEffect(() => {
+    fetchAPI()
+  }, [])
+  */}
 
 
   const [input, setInput] = useState('');
@@ -73,6 +86,18 @@ function App() {
           }
         </div>
       </div>
+      
+      {/*<div className='contenedor-calculadora'>
+        <h1>Tareas completadas</h1>
+        <ul>
+          {!tareas ? 'Cargando...' : tareas.map((prueba, index) => { 
+            if (prueba.completed) {
+              return <li key = {index} >{ "title " + prueba.title + " con userId " + prueba.userId + " estado " + prueba.completed}</li>
+            }
+          })}
+        </ul>
+      </div>
+      */}
     </div>
   );
 }
